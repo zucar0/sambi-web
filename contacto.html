@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!--Esta etiqueta VIEWPORT nos indica que en cualquier tipo de tamaño vamos a establecer ciertas medidas-->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!--
+  <meta name="viewport" 
+  content="width=device-width, Cualquier tamaño será el ancho de nuestra página de nuestro dispositivo.
+        user-scalable=no,   El usuario no puede hacer más grande nuestra página web
+        initial-scale=1.0,  Con estos tres parámetros se limita a que la pantalla no se pueda hacer ´más grande o más pequeña con los dedos.
+        maximum-scale=1.0,  
+        minimum-scale=1.0" 
+  >-->
+  <title>Contáctanos</title>
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+  <div class="contenedor">
+    <section>
+      <div class="banner">
+        
+      </div>
+    </section>
+    <header>
+      <nav>
+        <ul style="display: inline-flex; width: 90%;">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sistema.html">Sistema</a></li>
+          <li><a href="equipo.html">Equipo</a></li>
+          <li><a href="descripcion.html">Descripción</a></li>
+          <li><a href="mantenimiento.html">Mantenimiento</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <!--<li><a href="crud.php">CRUD</a></li>-->
+        </ul>
+        <img src="img/logo-cic.png" alt="Laboratorio de Ciencia de Datos y Tecnologías de Software" title="LCDyTS" style="width: 6%;     vertical-align: middle;">
+      </nav>
+    </header>
+    <section class="main">
+      <div class="imagen">
+        <img src="img/tecplay-contacto.jpg" alt="Tec & Play 2020" title="Tec & Play">
+      </div>
+      <section class="post">
+        <article>
+          <h2>Contáctanos</h2>  
+            <form action="contacto.php" id="formularioContacto" name="contact"  method="get" onsubmit="return valida(this)">
+              <div class="elem-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Juan Perez" pattern=[A-Z\sa-z]{3,20} required>
+              </div>
+              <div class="elem-group"> 
+                <label for="email">Tu E-mail</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@email.com" required>
+              </div>
+              <div class="elem-group">
+                <label for="department-selection">Elige la razón de tu consulta:</label>
+                <select id="department-selection" name="departametos" required>
+                    <option value="">Elige una</option>
+                    <option value="ventas">Ventas</option>
+                    <option value="capacitacion">Capacitación</option>
+                    <option value="sugerencias">Sugerencia</option>
+                </select>
+              </div>
+              <div class="elem-group">
+                <label for="title">Razón por la que nos contactas</label>
+                <input type="text" id="title" name="razon" required placeholder="Precio del curso de Java" pattern=[A-Za-z0-9\s]{8,60}>
+              </div>
+              <div class="elem-group">
+                <label for="message">Escribe tu mensaje</label>
+                <textarea id="message" name="mensaje" placeholder="Coméntanos lo que quieras." required></textarea>
+              </div>
+              <button type="submit" value="Enviar">Enviar mensaje</button>
+              <button type="reset" value="Borrar">Borrar</button>
+            </form>          
+        </article>
+      </section>
+    </section>
+    <aside>
+      <div class="widget">
+        <h3 class="título">Artículos destacados</h3>
+        <ul>
+          <li><a href="#">Los beneficios de IONOS.</a></li>
+          <li><a href="#">Desarrollo móvil: auge eterno.</a></li>
+          <li><a href="#">De periodista a programador.</a></li>
+          <li><a href="#">Guía de emprendimiento en IT.</a></li>
+          <li><a href="#">La curva de aprendizaje de Angular.</a></li> 
+        </ul>
+      </div>
+      <div class="widget">
+        <h3 class="título">Otros artículos</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut finibus massa. Mauris 
+          inibus at est sed porttitor. Sed rhoncus, metus eget eleifend ultricies, arcu nisi laoreet 
+          elit, vel egestas odio libero quis dui. 
+          Nulla porttitor lectus in ipsum vestibulum vestibulum. ulla vitae dolor non dolor suscipit rhoncus pretium at enim. Donec quis semper sem. Vivamus quis ante at lorem consectetur fermentum non nec ante. Vivamus quis ante at lorem consectetur fermentum non nec ante.
+        </p>
+      </div>
+      <div class="widget">
+        <h3 class="título">Suscríbete</h3>
+        <p>
+          Recibe toda la información de tecnología al suscribitr a nuestro newsletter. Recibe información, tutoriales, guías de programación de software y todo lo relevante para tu carrera en las tecnologías de la información. Anímate y visita nuestra sección de <a href="newsletter.html">Suscripción</a>
+        </p>
+      </div>
+    </aside>
+    <footer>
+      <p>
+        LCDyTS - <span>&#174;</span>
+      </p>
+    </footer>
+    
+  </div>
+  <script src="js/jquery.min"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/form-validation.js"></script>
+</body>
+</html> 

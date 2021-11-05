@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!--Esta etiqueta VIEWPORT nos indica que en cualquier tipo de tamaño vamos a establecer ciertas medidas-->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!--
+  <meta name="viewport" 
+  content="width=device-width, Cualquier tamaño será el ancho de nuestra página de nuestro dispositivo.
+        user-scalable=no,   El usuario no puede hacer más grande nuestra página web
+        initial-scale=1.0,  Con estos tres parámetros se limita a que la pantalla no se pueda hacer ´más grande o más pequeña con los dedos.
+        maximum-scale=1.0,  
+        minimum-scale=1.0" 
+  >-->
+  <title>Newsletter</title>
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <script type="text/javascript">
+    function validateForm() {
+      var x = document.forms["news"]["nombre"].value;
+      var y = document.forms["news"]["apellidos"].value;
+      var z = document.forms["news"]["email"].value;
+      var t = document.forms["news"]["twitter"].value;
+      var f = document.forms["news"]["facebook"].value;
+      if (x == "") {
+        alert("Nombre es un campo obligatorio");
+        return false;
+      } else if(y ==""){
+        alert("Apellido es un campo obligatorio");
+        return false;
+      } else if(z=="" ){
+        alert("Email es un campo obligatorio");
+        return false;
+      } else if(t==""){
+        alert("Twitter es un campo obligatorio");
+        return false;
+      } else if(f==""){
+        alert("Facebook es un campo obligatorio");
+        return false;
+      }
+
+    }
+  </script>
+</head>
+<body>
+  <div class="contenedor">
+    <section>
+      <div class="banner">
+        
+      </div>
+    </section>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="acerca-de.html">Acerca de</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="main">
+      <div class="imagen">
+        <img src="img/tecplay-boletin.jpg" alt="Tec & Play 2020" title="Tec & Play">
+      </div>
+      <div class="post">
+        <h1>Formulario de registro al Newsletter</h1>
+        <br>
+        <form action="comprobacion.php" method="post" name="news" onsubmit="return validateForm()">
+          <p>Nombre: <input type="text" name="nombre" maxlength="30" pattern="[a-zA-Z0-9]+" autofocus/></p><br>
+          <p>Apellidos: <input type="text" name="apellidos" size="40"/></p><br>
+          <p>e-mail: <input type="text" name="email" size="35" /></p><br>
+          <p>Twitter: <input type="text" name="twitter" size="35"/></p><br>
+          <p>Facebook: <input type="text" name="facebook" size="35"/></p><br>
+          <p>Día preferido para recibirlo: <select name="dia"> 
+              <option value="">lunes</option> 
+              <option value="Martes">martes</option> 
+              <option value="Miércoles">miercoles</option> 
+              <option value="Jueves">jueves</option> 
+              <option value="Viernes">viernes</option> 
+              <option value="Sábado">sábado</option> 
+              <option value="Domingo">domingo</option> </select>
+          </p><br>
+          <table>
+            <tr>
+               <td>
+               Temas de interés: <br/>
+               <input type="checkbox" name="software"/> Software<br/>
+               <input type="checkbox" name="framework"/> Frameworks<br/>
+               <input type="checkbox" name="Desarrollo web"/> Desarrollo web<br/>
+               <input type="checkbox" name="tutoriales"/> Tutoriales<br/>
+               <input type="checkbox" name="cursos"/> Cursos</p><br>
+               </td>
+            </tr>
+          </table>
+          <div class="container-button">          
+              <button id="enviar" name="enviar" type="submit" class="btn">ENVIAR</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <aside>
+      <div class="widget">
+        <h3 class="título">Artículos destacados</h3>
+        <ul>
+          <li><a href="#">Los beneficios de IONOS.</a></li>
+          <li><a href="#">Desarrollo móvil: auge eterno.</a></li>
+          <li><a href="#">De periodista a programador.</a></li>
+          <li><a href="#">Guía de emprendimiento en IT.</a></li>
+          <li><a href="#">La curva de aprendizaje de Angular.</a></li> 
+        </ul>
+      </div>
+      <div class="widget">
+        <h3 class="título">Otros artículos</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut finibus massa. Mauris 
+          inibus at est sed porttitor. Sed rhoncus, metus eget eleifend ultricies, arcu nisi laoreet 
+          elit, vel egestas odio libero quis dui. Nulla porttitor lectus in ipsum vestibulum vestibulum. 
+          ulla vitae dolor non dolor suscipit rhoncus pretium at enim. Donec quis semper sem. Vivamus 
+          quis ante at lorem consectetur fermentum non nec ante. Phasellus aliquam non quam posuere 
+          fringilla. Aenean a imperdiet nisi. Phasellus elit nunc, lacinia eget scelerisque ac, gravida 
+          eu libero. Nulla maximus est justo, et luctus sapien egestas sed. Curabitur vel malesuada 
+          sapien. Aliquam nisi lorem, consequat ac tincidunt in, mollis ac enim. Aliquam tortor diam, 
+          vulputate id arcu dignissim, pulvinar faucibus leo.
+        </p>
+      </div>
+    </aside>
+    <footer>
+      <p>
+        LCDyTS - <span>&#174;</span>
+      </p>
+    </footer>
+    
+  </div>
+</body>
+</html> 
