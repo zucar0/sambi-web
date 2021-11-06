@@ -242,6 +242,18 @@ body.system section section article form input {
 	width: 100%;
 }
 
+
+.puesto-profesores{
+	color: #ff0000;
+	font-weight: 700;
+}
+
+.mail-profesores{
+	color: #ffff00 !important;
+	font-weight: 700;
+
+}
+
 @media screen and (max-width: 800px){
 	body{
 		background: white;
