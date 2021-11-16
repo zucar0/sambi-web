@@ -3,6 +3,12 @@
 session_start();
 include('db.php');
 $usuario=$_SESSION['usuario'];
+$consulta_editor = "SELECT rol_id FROM usuarios where usuario='$usuario'";
+$resultadoRol=mysqli_query($conexion,$consulta_editor);
+$row = mysqli_fetch_array($resultadoRol); //Variable que contiene el rol
+if ($row['rol_id'] == 3){
+  header("location:home.php");
+}
 //Validar que se crea una variable de sesión al pasar por el Login
 #Si no existe la variable usuario mandaremos a location:sistema.php
 if(!isset($_SESSION['usuario'])){
@@ -14,7 +20,7 @@ if(!isset($_SESSION['usuario'])){
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Sistema Web de Análisis al Mantenimiento de Bicicletas (SAMBI)</title>
+  <title>EDITOR - Sistema Web de Análisis al Mantenimiento de Bicicletas (SAMBI)</title>
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
@@ -44,7 +50,7 @@ if(!isset($_SESSION['usuario'])){
       </div>
       <section class="post">
         <article>
-          <h2 style="display:inline-flex;">Bienvenido a SAMBI, <?php echo $usuario; ?>.</h2>              
+          <h2 style="display:inline-flex;">Bienvenido EDITOR, <?php echo $usuario; ?>.</h2>              
           <h3 style="margin-left:2.5rem;display:inline-flex;"><a href="cerrarsesion.php">Cerrar Sesión</a></h3>
           <p>
             Este es el Sistema de Análisis al Mantenimiento de Bicicletas (SAMBI) en donde podrás tener una visualización

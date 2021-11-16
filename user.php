@@ -1,20 +1,9 @@
-<?php
-//Recordar variable de sesión
-session_start();
-include('db.php');
-$usuario=$_SESSION['usuario'];
-//Validar que se crea una variable de sesión al pasar por el Login
-#Si no existe la variable usuario mandaremos a location:sistema.php
-if(!isset($_SESSION['usuario'])){
-  header("location:sistema.php");
-}
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Sistema Web de Análisis al Mantenimiento de Bicicletas (SAMBI)</title>
+  <title>USUARIO - Sistema Web de Análisis al Mantenimiento de Bicicletas (SAMBI)</title>
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
@@ -26,14 +15,12 @@ if(!isset($_SESSION['usuario'])){
     <header>
       <nav>
         <ul style="display: inline-flex; width: 90%;">
-          <li><a href="home.php">Inicio</a></li>
+        <li><a href="home.php">Inicio</a></li>
           <li><a href="#">Vida Útil</a></li>
           <li><a href="#">Viajes</a></li>
           <li><a href="#">Kilometraje</a></li>
           <li><a href="#">Por unidad</a></li>
           <li><a href="#">Historias</a></li>
-
-          <!--<li><a href="crud.php">CRUD</a></li>-->
         </ul>
         <img src="img/logo-cic.png" alt="Laboratorio de Ciencia de Datos y Tecnologías de Software" title="LCDyTS" style="width: 6%;     vertical-align: middle;">
       </nav>
@@ -44,22 +31,7 @@ if(!isset($_SESSION['usuario'])){
       </div>
       <section class="post">
         <article>
-          <h2 style="display:inline-flex;">Bienvenido a SAMBI, <?php echo $usuario; ?>.</h2>              
-          <h3 style="margin-left:2.5rem;display:inline-flex;"><a href="cerrarsesion.php">Cerrar Sesión</a></h3>
-          <p>
-            Este es el Sistema de Análisis al Mantenimiento de Bicicletas (SAMBI) en donde podrás tener una visualización
-            de datos con base en una serie de hipótesis y teorías que se sustentó con el apoyo de los Datos abiertos
-            que publica ECOBICI.
-          </p>
-          <p>
-            En esta interfaz podrás realizar la visualización de datos sobre las distintas directrices que tenemos
-            disponibles como son la vida útil de las bicicletas, los viajes realizados, el kilometraje recorrido. 
-          </p>
-          <p>
-              También tratamos de crear una serie de pronósticos sobre el mantenimiento correctivo que reciben las 
-              bicicletas durante su periodo de servicio al interior de este sistema de transporte público, catalogado
-              como el sistema más económico. 
-          </p>
+          <h2 style="display:inline-flex;">Bienvenido USUARIO, <?php echo $usuario; ?>.</h2>              
         </article>
       </section>
     </section>

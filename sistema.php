@@ -15,8 +15,8 @@
     <header>
       <nav>
         <ul style="display: inline-flex; width: 90%;">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="sistema.html">Sistema</a></li>
+          <li><a href="index.php">Inicio</a></li>
+          <li><a href="sistema.php">Sistema</a></li>
           <li><a href="equipo.html">Equipo</a></li>
           <li><a href="descripcion.html">Descripción</a></li>
           <li><a href="mantenimiento.html">Mantenimiento</a></li>
@@ -42,7 +42,7 @@
             <input type="password" placeholder="Ingresa tu contraseña" name="contrasena">
             <br>
             <br>
-            <input type="submit" value="Ingresar">
+            <input type="submit" value="Iniciar sesión">
            </form>
           <br>
           <p>
@@ -53,7 +53,7 @@
           </p>
           <br>
           <p>
-            <a href="#">Regístrate aquí</a>
+            <a href="registro.html">Regístrate aquí</a>
           </p>
         </article>
       </section>

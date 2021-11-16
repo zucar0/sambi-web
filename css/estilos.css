@@ -1,24 +1,19 @@
 *{
-
 	margin: 0;
 	padding: 0;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-
 }
-
 div.elem-group {
   margin: 40px 0;
 }
-
 label {
   display: block;
   font-family: 'Aleo';
   padding-bottom: 4px;
   font-size: 1.25em;
 }
-
 input, select, textarea {
   border-radius: 2px;
   border: 1px solid #ccc;
@@ -28,11 +23,9 @@ input, select, textarea {
   width: 500px;
   padding: 8px;
 }
-
 textarea {
   height: 250px;
 }
-
 button {
   height: 50px;
   background: gray;
@@ -45,11 +38,9 @@ button {
   padding: 5px 5px;
   position: relative;
 }
-
 button:hover {
   border: 2px solid black;
 }
-
 body{
 	font-family: Arial, Sans-serif;
 	font-size: 16px;
@@ -60,79 +51,57 @@ body{
 	max-width: 1000px;
 	margin: 20px auto;
 	overflow: hidden;
-
 }
-
 header{
 	background: #fff;
 }
 header nav {
 	width: 100%;
 }
-
 header nav ul {
-
 	width: 100%;
 	overflow: hidden;
 	list-style: none;
-
 }
-
 header nav ul li {
 	float: left;
 	/*También se puede hacer con display*/
 	/*display: inline-block;*/
 }
-
 header nav ul li a {
-
 	text-decoration: none;
 	display: inline-block;
 	padding: 15px 20px;
 	color: #000;
-
 }
-
 header nav ul li a:hover{
-
 	background: black;
 	color: white;
-
 }
-
 .main {
 	width: 70%;
 	background: #fff;
 	float: left;
 }
-
 .main .imagen {
 
 	width: 100%;
-
 }
-
 .main .imagen img {
 	width: 100%;
 	vertical-align: top;
 }
-
 .main .post {
 	padding: 40px;
 }
-
 .main .post article h2{
 	margin-bottom: 20px;
 	color: #424242;
 }
-
 .main .post article p{
-
 	margin-bottom: 15px;
 	line-height: 27px;
-
 }
-
 aside	{
 	width: 30%;
 	background: #000000;
@@ -140,53 +109,34 @@ aside	{
 	color: #fff;
 	float: left;
 }
-
 aside .widget {
-
 	margin-bottom: 20px;
-
 }
-
 aside .widget .título {
 	color: #eeff00;
 	border-bottom: 1px solid #eeff00;
 	margin-bottom: 10px;
 }
-
 aside .widget ul{
-
 	list-style: none;
-
 }
-
 aside .widget ul li {
-
 	border-bottom: 1px solid rgba(255,255,255, 0.2);
 	padding: 10px 0;
-
 }
-
 aside .widget ul li a {
-
 	color: #fff;
 	text-decoration: none;
-
 }
-
 aside .widget ul li a:hover {
 	color: #8f8f8f;
 }
-
 aside .widget p{
 	line-height: 27px;
 }
-
 .galeria{
-
 	width: 100%;
-
 }
-
 .galeria img{
 	vertical-align: top;
 	width: 300px;
@@ -194,18 +144,11 @@ aside .widget p{
 	padding: 5px;
 	opacity: 0.5;
 	border: 1px solid #484848;
-
 }
-
 .galeria img:hover {
-
 	border: 1px solid	#ffffff;
 	opacity: 1;
-
-
 }
-
-
 footer	{
 	width: 100%;
 	background: black;
@@ -216,7 +159,6 @@ footer	{
 	overflow: hidden;
 	/*También se puede utilizar clear:both;*/
 }
-
 .btn {
 	text-align: center;
 	padding: 15px 32px;
@@ -225,35 +167,26 @@ footer	{
 	 background-color: blue;
 	 height: 100%;
 }
-
-
 .container-button {
   height: 100%;
   text-align: center;
   
   opacity: 50%;
 }
-
 .btn-ingresar{
 	width: 100%;
 }
-
 body.system section section article form input {
 	width: 100%;
 }
-
-
 .puesto-profesores{
 	color: #ff0000;
 	font-weight: 700;
 }
-
 .mail-profesores{
 	color: #ffff00 !important;
 	font-weight: 700;
-
 }
-
 @media screen and (max-width: 800px){
 	body{
 		background: white;
@@ -268,3 +201,33 @@ body.system section section article form input {
 		width: 100%; 
 	}
 }
+.tabla-usuarios{
+	width: 100%;
+    text-align: center;
+}
+input.boton-eliminar{
+	width: 90px;
+    font-size: 19px;
+}
+.ub1
+{
+	text-align:left;
+	font-weight: bold;
+
+	margin-bottom:0.5em;
+	margin-top:0.5em;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	border: 1px solid #ddd;
+  }
+  
+  th, td {
+	text-align: left;
+	padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}

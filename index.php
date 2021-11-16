@@ -15,20 +15,20 @@
     <header>
       <nav>
         <ul style="display: inline-flex; width: 90%;">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="sistema.html">Sistema</a></li>
+          <li><a href="index.php">Inicio</a></li>
+          <li><a href="sistema.php">Sistema</a></li>
           <li><a href="equipo.html">Equipo</a></li>
           <li><a href="descripcion.html">Descripción</a></li>
           <li><a href="mantenimiento.html">Mantenimiento</a></li>
           <li><a href="contacto.html">Contacto</a></li>
           <!--<li><a href="crud.php">CRUD</a></li>-->
         </ul>
-        <img src="img/logo-cic.png" alt="Laboratorio de Ciencia de Datos y Tecnologías de Software" title="LCDyTS" style="width: 6%;     vertical-align: middle;">
+        <img src="img/logo-cic.png" alt="Logo del Laboratorio de Ciencia de Datos y Tecnologías de Software" title="LCDyTS" style="width: 6%;     vertical-align: middle;">
       </nav>
     </header>
     <section class="main">
       <div class="imagen">
-        <img src="img/ecobici-mantenimiento-correctivo.jpg" alt="Técnico reparando una bici en el taller de Ecobici" title="Técnico reparando una bici en el taller de Ecobici">
+        <img src="img/ecobici-mantenimiento-correctivo-sambi.jpg" alt="Acceso general de usuarios" title="Acceso general de usuarios">
       </div>
       <section class="post">
         <article>
@@ -52,6 +52,20 @@
               y la manera en que se procede para que una bicicleta entre al taller. Este sistema
               forma parte del esfuerzo para reducir los problemas de movilidad en CDMX.
           </p>
+          <p>El sistema nos entrega una serie de visualizaciones para la comprensión del mantenimiento correctivo
+              que reciben las unidades:
+          </p>
+          <ul>
+            <li>Vida útil: Muestra los años de servicio de las unidades, a partir del primer viaje registrado 
+              hasta el último</li>
+              <li>Viajes: Nos muestra la visualización de los viajes totales y más información como el promedio
+                de viajes que tienen las bicicletas.
+              </li>
+            <li>
+              Kilometraje: Pretende mostrar la visualización de los kilómetros recorridos por cada bicicleta así 
+              y de esa forma conocer el parémtro de KM que utiliza ECOBICI para considerar sus mantenimientos. 
+            </li>
+          </ul>
         </article>
       </section>
     </section>
