@@ -32,8 +32,6 @@ if(!isset($_SESSION['usuario'])){
           <li><a href="#">Kilometraje</a></li>
           <li><a href="#">Por unidad</a></li>
           <li><a href="#">Historias</a></li>
-
-          <!--<li><a href="crud.php">CRUD</a></li>-->
         </ul>
         <img src="img/logo-cic.png" alt="Laboratorio de Ciencia de Datos y Tecnologías de Software" title="LCDyTS" style="width: 6%;     vertical-align: middle;">
       </nav>

@@ -26,7 +26,6 @@
 	$ejecutar = mysqli_query($con, $actualizar);
 		if($ejecutar){
 			echo "<script>alert('Datos actualizados')</script>";
-			echo "<script>window.open('crud.php','_self')</script>";
 		}
 	}
   ?>

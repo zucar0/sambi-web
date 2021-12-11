@@ -21,7 +21,6 @@
           <li><a href="descripcion.html">Descripción</a></li>
           <li><a href="mantenimiento.html">Mantenimiento</a></li>
           <li><a href="contacto.html">Contacto</a></li>
-          <!--<li><a href="crud.php">CRUD</a></li>-->
         </ul>
         <img src="img/logo-cic.png" alt="Logo del Laboratorio de Ciencia de Datos y Tecnologías de Software" title="LCDyTS" style="width: 6%;     vertical-align: middle;">
       </nav>
