@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>SAMBI</title>
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+  <!-- Enlace a estilos de formulario -->
+  <link rel="stylesheet" type="text/css" href="css/estilosformularios.css">
 </head>
 <body class="system">
   <div class="contenedor">
@@ -33,27 +36,109 @@
         <article>
           <h2 style="text-align: center;">Regístrate en SAMBI</h2>  
           <!-- FORMULARIO -->
-          <form action="registro.php" method="POST">
+          <form action="registro.php" method="POST" id="form">
             <label for="inputName">Nombre: </label>
-            <input type="text" class="texto-nombre" name="txtNombre">
+            <input type="text" class="texto-nombre" name="txtNombre" required>
             <br>
             <br>
             <label for="inputEmail">Email:</label>
-            <input type="text" class="input-email" name="txtEmail">
+            <input type="text" class="input-email" name="txtEmail" id="email_usuario" required="required">
             <br>
             <br>
-            <label for="inputName">Usuario: </label>
-            <input type="text" class="texto-usuario" name="txtUsuario">
+            <div>
+              <label for="inputName">Usuario: </label>
+              <input type="text"
+                     name="txtUsuario" 
+                     placeholder="Nombre de usuario"
+                     pattern="[a-z]{1,15}"
+                     title="El usuario debe contener únicamente letras minúsculas. Ejemplo: john"
+                     id="username"
+                     class="texto-usuario"  required>
+            </div>
             <br>
             <br>
             <label for="inputPassword">Contraseña:</label>
-            <input type="password" class="input-contrasena" name="txtContrasena">
+            <input type="password" class="input-contrasena" name="txtContrasena" required>
             <br>
             <br>
             <button type="submit" class="btn-registrar">Registrar</button>
           </form>
           <br>
  
+        </article>
+        <article>
+          <form action="" id="formulario" class="formulario">
+              <!-- Grupo Usuario -->
+              <div class="formulario__grupo" id="grupo__usuario">
+                <label for="usuario" class="formulario__label">Usuario</label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="john123"> 
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El usuario debe contener de 4 a 16 dígitos y solo puede contener números, letras y guión bajo.</p>
+              </div>
+              <!-- Grupo Nombre -->
+              <div class="formulario__grupo" id="grupo__nombre">
+                <label for="nombre" class="formulario__label">Nombre</label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe"> 
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El nombre debe contener de 4 a 16 dígitos y solo puede contener números, letras y guión bajo.</p>
+              </div>
+              <!-- Grupo Password -->
+              <div class="formulario__grupo" id="grupo__password">
+                <label for="password" class="formulario__label">Contraseña</label>
+                <div class="formulario__grupo-input">
+                  <input type="password" class="formulario__input" name="password" id="password"> 
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">La contraseña debe contener de 4 a 16 dígitos.</p>
+              </div>
+              <!-- Grupo Password 2-->
+              <div class="formulario__grupo" id="grupo__password2">
+                <label for="password2" class="formulario__label">Repetir contraseña</label>
+                <div class="formulario__grupo-input">
+                  <input type="password" class="formulario__input" name="password2" id="password2"> 
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+              </div>
+              <!-- Grupo Correo Electrónico -->
+              <div class="formulario__grupo" id="grupo__correo">
+                <label for="correo" class="formulario__label">Correo Electrónico</label>
+                <div class="formulario__grupo-input">
+                  <input type="email" class="formulario__input" name="correo" id="correo" placeholder="john@doe.com"> 
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El correo debe contener números, letras, puntos y guiones.</p>
+              </div>
+              <!-- Grupo telefono -->
+              <div class="formulario__grupo" id="grupo__telefono">
+                <label for="telefono" class="formulario__label">Teléfono</label>
+                <div class="formulario__grupo-input">
+                  <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="5522665544"> 
+                  <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El teléfono debe contener números y su máximo es de 14 dígitos.</p>
+              </div>
+              <!-- Grupo terminos -->
+              <div class="formulario__grupo-terminos" id="grupo__terminos">
+                <label class="formulario__label">
+                  <input class="formulario__checkbox" type="checkbox" name="terminos" id="">
+                  Acepto los Términos y Condiciones
+                </label>
+              </div>
+
+              <div class="formulario__mensaje" id="formulario__mensaje">
+                <i class="fas fa-exclamation-triangle"> <b>Error: </b> Favor de llenar correctamente el formulario de registro </i>
+              </div>
+
+              <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <button type="submit" class="formulario__btn">Enviar</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">El formulario se envió exitosamente</p>
+              </div>
+          </form>
         </article>
       </section>
     </section>
@@ -94,5 +179,9 @@
       </p>
     </footer>  
   </div>
+  <!-- Enlace al archivo de validaciones -->
+  <script src="js/validaciones.js"></script>
+  <!-- Enlace a los íconos de Font Awesome -->
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html> 
