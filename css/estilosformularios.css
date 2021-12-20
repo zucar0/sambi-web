@@ -123,7 +123,7 @@
 }
 
 /* Estilos para la validación de INPUTS*/
-.formulario_grupo-correcto .formulario__validacion-estado{
+.formulario__grupo-correcto .formulario__validacion-estado{
     color: #1ed12d;
     opacity: 1; 
 } 
